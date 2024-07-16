@@ -1,0 +1,19 @@
+
+h1{
+    color: white;
+    font-size:20vh;
+    font-family: 'Roboto', sans-serif;
+    z-index: 100;
+    text-align: center;
+    mix-blend-mode: difference;
+    filter: drop-shadow(0 0 10px white);
+}
+#myVideo {
+    filter: contrast(140%) brightness(90%) grayscale(100%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }

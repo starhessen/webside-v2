@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>portfolio</title>
+      <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+      <script src="https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+   </head>
+   <body>
+      <header>
+         <div class="navbar">
+            <div class="logo">Star</div>
+            <nav>
+               <ul class="links">
+                  <li><a href="#home">HOME</a></li>
+                  <li><a href="#aboutme">ABOUT ME</a></li>
+                  <li><a href="#project">PROJECTS</a></li>
+                  <li><a href="#skills">SKILLS</a></li>
+               </ul>
+            </nav>
+            <a href="#kontakt" class="action_btn">KONTAKT</a>
+            <div class="toggle_btn">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+         </div>
+         <div class="dropdown_menu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#aboutme">ABOUT ME</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#kontakt" class="action_btn">KONTAKT</a></li>
+         </div>
+      </header>
+      <script>
+         const toggleBtn = document.querySelector('.toggle_btn')
+         const toggleBtnIcon = document.querySelector('.toggle_btn i')
+         const dropdown_menu = document.querySelector('.dropdown_menu')
+         
+         toggleBtn.addEventListener('click', () => {
+             dropdown_menu.classList.toggle('open')
+             const isOpen = dropdown_menu.classList.contains('open')
+             toggleBtnIcon.classList = isOpen
+                 ? 'fa-solid fa-xmark'
+                 : 'fa-solid fa-bars'
+         });
+      </script>
+      <div class="portfolio" id="home">
+         <h1 id="title" class="centered">
+            Web Developer Portfolio
+            <span class="fancy">Star</span>.
+         </h1>
+      </div>
+      <div class="circle"></div>
+      <div class="content">
+         <div class="spacer layer1"></div>
+         <section id="aboutme" class="Withe">
+            <h2>ABOUT ME</h2>
+            <p>
+               Hallo, ich bin Star, ein begeisterter Webentwickler. Mit Erfahrung in HTML,CSS und JS gestalte ich ansprechende Websites. Ich liebe es, kreative Ideen in benutzerfreundliche Lösungen umzusetzen. Ob Design, Performance-Optimierung oder knifflige Codierungen – ich bin mit Begeisterung dabei. Schauen Sie sich mein Portfolio an und lassen Sie uns gemeinsam Ihre digitalen Ideen verwirklichen!
+            </p>
+         </section>
+         <div class="spacer layer1 flip"></div>
+         <section id="project" class="black">
+            <h2>PROJECTS</h2>
+            <p></p>
+            <div id="cards" >
+               <div class="card" onclick="window.open('./appleside/index.html','_self');">
+                  <div class="card-content" >
+                     <div class="card-image">
+                        <img class="game-img" src=".\appleside\assets\images\apple.svg" alt="applelogo">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img src=".\appleside\assets\images\apple.svg" alt="applelogo">
+                           <div class="card-info-title">
+                              <h3>Apple Website</h3>
+                              <h4>Using React + Three.js & GSAP</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card" onclick="window.open('./MemoryCardGames/index.html','_self');">
+                  <div class="card-content">
+                     <div class="card-image">
+                        <img class="game-img" src=".\assets\memory-game.svg" alt="memory-game">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img  src=".\assets\memory-game.svg" alt="memory-game">
+                           <div class="card-info-title">
+                              <h3>Memory</h3>
+                              <h4>A Memory game</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card" onclick="window.open('./RockPaperScissors/index.html','_self');">
+                  <div class="card-content">
+                     <div class="card-image">
+                        <img class="game-img" src=".\assets\rock-paper-scissors.svg" alt="memory-game">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img  src=".\assets\rock-paper-scissors.svg" alt="memory-game">
+                           <div class="card-info-title">
+                              <h3>Rock Paper Scissors</h3>
+                              <h4>A Rock Paper Scissors game</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card" onclick="window.open('./assets/freecode.png');">
+                  <div class="card-content">
+                     <div class="card-image">
+                        <img src="./assets/freecode.png" alt="fcimg" class="game-img">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img src="./assets/freecode.png" alt="fcimg">
+                           <div class="card-info-title">
+                              <h3>CSS and HTML</h3>
+                              <h4>freecode</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card" onclick="window.open('./assets/js.png')">
+                  <div class="card-content">
+                     <div class="card-image">
+                        <img src="./assets/js.png" alt="fcimg" class="game-img">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img src="./assets/js.png" alt="fcimg" >
+                           <div class="card-info-title">
+                              <h3>JS</h3>
+                              <h4>codecademy</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card" onclick="window.open('./paint/index.html','_self');">
+                  <div class="card-content">
+                     <div class="card-image">
+                        <img src="./assets/paint.svg" alt="fcimg" class="game-img">
+                     </div>
+                     <div class="card-info-wrapper">
+                        <div class="card-info">
+                           <img src="./assets/paint.svg" alt="fcimg" >
+                           <div class="card-info-title">
+                              <h3>Paint</h3>
+                              <h4>Paint a imag.</h4>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <button  class="more" onclick="window.open('./PROJECTS/index.html','_self');">Show More</button>
+            </div>
+            <div class="wave2">
+               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                  preserveAspectRatio="none">
+                  <path
+                     d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                     opacity=".25" class="shape-fill"></path>
+                  <path
+                     d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                     opacity=".5" class="shape-fill"></path>
+                  <path
+                     d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                     class="shape-fill"></path>
+               </svg>
+            </div>
+         </section>
+         <div class="spacer layer1 "></div>
+         <section id="skills" class="Withe">
+            <h2>SKILLS</h2>
+            <div class="scroller" data-speed="fast">
+               <ul class="tag-list scroller__inner">
+                  <li>React</li>
+                  <li></li>
+                  <li>HTML</li>
+                  <li></li>
+                  <li>CSS</li>
+                  <li></li>
+                  <li>JS</li>
+                  <li></li>
+                  <li>SSG</li>
+                  <li></li>
+                  <li>Photoshop</li>
+                  <li></li>
+                  <li>animation</li>
+                  <li></li>
+                  <li>UI/UX</li>
+               </ul>
+            </div>
+            <svg id="visual" viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+               <g transform="translate(454.2743988400256 161.25662273260434)">
+                  <path id="blob1"
+                     d="M75.2 -129.5C96.7 -117.8 112.9 -96.1 121.8 -72.9C130.7 -49.7 132.3 -24.8 124.4 -4.6C116.4 15.6 98.8 31.3 87.1 49.7C75.5 68.2 69.7 89.5 56.2 102.7C42.7 115.9 21.3 121 1.6 118.2C-18.2 115.5 -36.3 104.9 -63.4 99.6C-90.5 94.2 -126.4 94 -135.5 78.2C-144.6 62.5 -126.8 31.3 -121.4 3.1C-116 -25 -122.9 -50 -116.5 -70.4C-110.1 -90.7 -90.3 -106.4 -68.7 -118.1C-47 -129.7 -23.5 -137.4 1.7 -140.3C26.8 -143.1 53.7 -141.3 75.2 -129.5"
+                     fill="#0066cc"></path>
+               </g>
+               <g transform="translate(468.87313344397296 138.67646153210075)" style="visibility:hidden">
+                  <path id="blob2"
+                     d="M69.7 -123.3C86.5 -111.1 93.5 -84.6 100.4 -61.6C107.3 -38.7 114.2 -19.3 110.9 -1.9C107.7 15.6 94.5 31.3 83.5 47.3C72.6 63.3 64.1 79.7 50.5 97.6C37 115.4 18.5 134.7 -6.2 145.5C-31 156.4 -62 158.7 -87.7 147.9C-113.4 137.1 -133.8 113 -141.6 86.2C-149.4 59.3 -144.7 29.7 -146.1 -0.8C-147.5 -31.2 -154.9 -62.5 -142.1 -80.7C-129.3 -98.9 -96.1 -104 -69.1 -110.2C-42 -116.4 -21 -123.7 2.7 -128.5C26.5 -133.2 53 -135.5 69.7 -123.3"
+                     fill="#0066cc"></path>
+               </g>
+            </svg>
+            <script>
+               const blob1 = KUTE.fromTo('#blob1', { path: '#blob1' }, { path: '#blob2' }, { repeat: 999, duration: 3000, yoyo: true }).start();
+            </script>
+         </section>
+         <div class="spacer layer1 flip"></div>
+         <section id="kontakt" class="black">
+            <h2>kontakt</h2>
+            <ul class="tag-list ">
+               <li>starrascho@gmail.com</li>
+               <li>TEL.015905882297</li>
+            </ul>
+         </section>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
